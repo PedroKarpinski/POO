@@ -1,0 +1,68 @@
+Números complexos
+
+Objetivo: 
+Praticar o projeto de classes
+
+Código prévio
+Temos dois arquivos:
+
+Complexo.java: Inicialmente vazia, onde você irá implementar a classe Complexo
+
+Main.java: Você pode usar essa classe para testar a classe. Há um trecho de código comentado exemplificando o uso da classe Complexo. Você pode descomentar e modificar esse trecho para testar a classe.
+
+Restrições:
+Não é necessário nem permitido utilizar métodos pré-definidos da biblioteca-padrão de Java (por exemplo, da classe Math). Exceto pela classe java.util.Locale. Todas as operações podem ser feitas com os operadores aritméticos usuais.
+
+Definição do problema:
+Um número complexo é um número que pode ser expresso na forma 𝑎 + 𝑏𝑖, onde 𝑎 e 𝑏 são números reais e 𝑖 é a unidade imaginária, que satisfaz i*i = −1.
+
+O que fazer:
+Arquivo-base: Complexo.java
+
+Propriedades: A classe deve apresentar duas propriedades, uma representando a parte real e outra representando a parte imaginária do número complexo. Ambas as propriedades devem ser do tipo double.
+
+Métodos: A classe deve implementar métodos para as operações a seguir. As assinaturas dos métodos devem corresponder ao que é especificado no diagrama UML (i.e. mesmo nome, mesmo tipo de argumentos e mesmo tipo de retorno).
+
+Construtor: Inicializa a parte real e imaginária do número complexo. Exemplo:
+
+  Complexo c = new Complexo(1, 2); // c = 1 + 2i
+
+Soma: Recebe um número complexo como argumento e retorna um novo número complexo que é a soma do número complexo atual com o número complexo passado como argumento. Exemplo:
+
+  Complexo c1 = new Complexo(1, 2); // c1 = 1 + 2i
+  Complexo c2 = new Complexo(3, 4); // c2 = 3 + 4i
+
+  Complexo c3 = c1.adiciona(c2); // c3 = 4 + 6i
+
+Subtração: Recebe um número complexo como argumento e retorna um novo número complexo que é a subtração do número complexo atual com o número complexo passado como argumento. Exemplo:
+
+  Complexo c1 = new Complexo(1, 2); // c1 = 1 + 2i
+  Complexo c2 = new Complexo(3, 4); // c2 = 3 + 4i
+
+  Complexo c3 = c1.subtrai(c2); // c3 = -2 - 2i
+
+Multiplicação: Recebe um número complexo como argumento e retorna um novo número complexo que é a multiplicação do número complexo atual com o número complexo passado como argumento. Exemplo:
+
+  Complexo c1 = new Complexo(1, 2); // c1 = 1 + 2i
+  Complexo c2 = new Complexo(3, 4); // c2 = 3 + 4i
+
+  Complexo c3 = c1.multiplica(c2); // c3 = -5 + 10i
+
+Divisão: Recebe um número complexo como argumento e retorna um novo número complexo que é a divisão do número complexo atual com o número complexo passado como argumento. Exemplo:
+
+  Complexo c1 = new Complexo(1, 2); // c1 = 1 + 2i
+  Complexo c2 = new Complexo(3, 4); // c2 = 3 + 4i
+
+  Complexo c3 = c1.divide(c2); // c3 = 0.44 + 0.08i
+
+Conversão para string: Retorna uma String que representa do número complexo na forma 𝑎 + 𝑏𝑖. Os valores reais devem ser exibidos com duas casas decimais.
+
+Dica: você pode usar o método String.format() para essa operação. Ela opera de modo similar ao método printf, mas retorna uma String ao invés de imprimir na saída padrão.
+
+Exemplo:
+
+  Complexo c = new Complexo(1, 2); // c = 1 + 2i
+
+  System.out.println(c.converteParaString()); // imprime "1.00 + 2.00i"
+
+Alerta: Note que, para simplificar a construção da String, no caso de números negativos a parte imaginária deve ser precedida por um sinal de menos, mantendo o sinal de mais entre a parte real e a imaginária. Por exemplo, o número complexo −1 − 2i deve ser representado como -1.00 + -2.00i.

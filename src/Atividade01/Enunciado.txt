@@ -1,0 +1,61 @@
+Introdução à programação em Java
+
+Objetivo:
+Familiarizar-se com as principais construções sintáticas da linguagem Java.
+
+Praticar a construção de algoritmos envolvendo números e strings.
+
+Código prévio
+O arquivo Main.java contém três métodos estáticos que devem ser implementados:
+
+public static double sqrt(double n, double epsilon)
+
+Calcula a raiz quadrada de n com precisão de epsilon casas decimais.
+
+public static boolean isPerfectNumber(long number)
+
+Verifica se number é um número perfeito.
+
+public static String encrypt(String message, int key)
+
+Encripta a mensagem message com a cifra de César, utilizando a chave key.
+
+public static String decrypt(String message, int key)
+
+Desencripta a mensagem message com a cifra de César, utilizando a chave key.
+
+Restrições
+Não é permitido usar a biblioteca java.lang.Math para cálculos matemáticos. Caso seja necessário, implemente as funções matemáticas manualmente, pois são simples de serem implementadas.
+
+Enunciados
+Aproximação de raiz quadrada
+
+O método babilônico para aproximação da raiz quadrada de um número é dado pela fórmula xn+1 = 1/2 (xn + n/xn), onde:
+
+𝑥𝑛 é a aproximação atual da raiz quadrada de 𝑛.
+
+𝑥𝑛+1 é a próxima aproximação da raiz quadrada de 𝑛.
+
+O processo é repetido até que a diferença entre 𝑥𝑛+1 e 𝑥𝑛 seja menor que um valor 𝜖, que representa a quantidade de casas decimais de precisão desejada. Por exemplo, se 𝜖 = 0.001, a aproximação será considerada correta se a diferença absoluta entre 𝑥𝑛+1 e 𝑥𝑛 for menor que 0.001. Na primeira iteração, é preciso escolher um valor inicial para 𝑥0, ou melhor, fazer um “chute” inicial. Um valor comum é 𝑥0 = 𝑛/2. 
+
+Implemente o método estático sqrt que calcula a raiz quadrada de um número n com precisão de epsilon casas decimais. O método deve retornar a raiz quadrada de n com a precisão desejada.
+
+Restrições. Assuma que os testes sempre fornecerão valores inteiros positivos para n.
+
+Teste de número perfeito
+Um número perfeito é um inteiro positivo que é igual à soma de seus divisores positivos, excluindo ele mesmo. Por exemplo, 6 é um número perfeito pois 1+2+3=6. Implemente o método estático isPerfectNumber que verifica se um número number é um número perfeito. O método deve retornar true se number for um número perfeito e false caso contrário.
+
+Cifra de César
+A cifra de César é um método de criptografia ancestral que consiste em substituir cada letra de uma mensagem por outra letra do alfabeto, deslocada um número fixo de posições, considerando a ordem natural das letras do alfabeto. Os deslocamentos, a princípio, podem ocorrer em qualquer direção, mas para simplificar, consideraremos apenas deslocamentos para a direita. Por exemplo, com uma chave de deslocamento de 3 posições, a letra ’a’ seria substituída por ’d’, ’b’ por ’e’, ’c’ por ’f’, e assim por diante. É importante perceber que o deslocamentos são circulares, ou seja, a letra ’z’ seria substituída por ’c’.
+
+Implemente os seguintes métodos:
+
+O método encrypt que encripta uma mensagem message com a cifra de César, utilizando a chave key. O método deve retornar a mensagem encriptada.
+
+Exemplo: encrypt("hello", 3) deve retornar "khoor".
+
+O método decrypt que desencripta uma mensagem message com a cifra de César, utilizando a chave key. O método deve retornar a mensagem desencriptada.
+
+Exemplo: decrypt("khoor", 3) deve retornar "hello".
+
+Restrições. Considere que a mensagem a ser encriptada é composta apenas por letras minúsculas do alfabeto, e.g. a-z, sem acentos e sem espaços.
