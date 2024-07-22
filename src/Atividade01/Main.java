@@ -1,3 +1,5 @@
+package Atividade01;
+
 public class Main {
     public static double sqrt(double n, double epsilon) {
         double cur = n/2;
@@ -22,11 +24,7 @@ public class Main {
             }
         }
 
-        if (cont == number) {
-            return true;
-        } else {
-            return false;
-        }
+        return cont == number;
     }
 
     public static String encrypt(String message, int key) {
