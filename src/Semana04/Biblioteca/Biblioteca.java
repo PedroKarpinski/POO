@@ -6,11 +6,11 @@ public class Biblioteca {
     ArrayList<Livro> acervo;
 
     Biblioteca() {
-        acervo = new ArrayList<Livro>();
+        acervo = new ArrayList<>();
     }
 
     ArrayList<Livro> listaEmprestados() {
-        ArrayList<Livro> emprestados = new ArrayList<Livro>();
+        ArrayList<Livro> emprestados = new ArrayList<>();
 
         for (Livro livro : acervo) {
             if (livro.emprestado()) {
@@ -22,7 +22,7 @@ public class Biblioteca {
     }
 
     ArrayList<Livro> listaDisponiveis() {
-        ArrayList<Livro> disponiveis = new ArrayList<Livro>();
+        ArrayList<Livro> disponiveis = new ArrayList<>();
 
         for (Livro livro : acervo) {
             if (!livro.emprestado()) {
@@ -35,13 +35,5 @@ public class Biblioteca {
 
     void adicionaLivro(Livro livro) {
         acervo.add(livro);
-    }
-
-    void removeLivroPeloIsbn(String isbn) {
-        for (Livro livro : acervo) {
-            if (isbn.equals(livro.isbn)) {
-                acervo.remove(livro);
-            }
-        }
     }
 }

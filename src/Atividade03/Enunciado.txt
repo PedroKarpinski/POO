@@ -1,0 +1,127 @@
+Objetivos
+Praticar o projeto de classes
+
+Código prévio
+Temos dois arquivos:
+
+Racional.java. Inicialmente vazia, onde você irá implementar a classe Racional
+
+Main.java. Você pode usar essa classe auxiliar para testar a classe Racional
+
+Restrições
+Não é necessário nem permitido utilizar métodos pré-definidos da biblioteca-padrão de Java (por exemplo, da classe Math). Exceto pela classe java.util.Locale. Todas as operações podem ser feitas com os operadores aritméticos usuais.
+
+Comportamentos esperados dos métodos
+
+Método construtor
+
+Deve criar um objeto do tipo Racional com os valores passados como argumento.
+
+Por exemplo, para criar o racional 3/5:
+
+    Racional r = new Racional(3, 5)
+
+Método converteParaString
+
+Converte o número racional para String, no formato "<numerador>/<denominador>". Caso o número racional seja negativo, o sinal deve aparecer na frente do numerador. Caso seja positivo, nenhum sinal deve ser exibido. Atenção. O número racional deve ser sempre exibido na sua forma simplificada, por exemplo, 
+2/4 deve ser exibido como 1/2.
+
+Exemplo:
+
+Racional a = new Racional(1, 2);
+Racional b = new Racional(-1, 3);
+Racional c = new Racional(1, -3);
+Racional d = new Racional(-1, -2);
+Racional e = new Racional(2, 4);
+
+System.out.printf("%s %s %s %s\n", a, b, c, d);
+System.out.println(a.converteParaString());
+System.out.println(b.converteParaString());
+System.out.println(c.converteParaString());
+System.out.println(d.converteParaString());
+System.out.println(e.converteParaString());
+
+1/2 
+-1/3 
+-1/3 
+1/2
+1/2
+
+Método adiciona
+
+Adiciona o racional atual com o racional passado como argumento e retorna um novo racional com o resultado.
+
+Por exemplo, para a operação 1/2+3/5:
+
+Racional a = new Racional(1, 2);
+Racional b = new Racional(3, 5);
+Racional c = a.adiciona(b);
+
+System.out.printf("%s + %s = %s\n", a.converteParaString(), b.converteParaString(), c.converteParaString());
+
+1/2 + 3/5 = 11/10
+
+Método subtrai
+
+Subtrai o racional atual com o racional passado como argumento e retorna um novo racional com o resultado.
+
+Por exemplo, para a operação 1/2−3/5:
+
+Racional a = new Racional(1, 2);
+Racional b = new Racional(3, 5);
+Racional c = a.subtrai(b);
+
+System.out.printf("%s - %s = %s\n", a.converteParaString(), b.converteParaString(), c.converteParaString());
+
+1/2 - 3/5 = -1/10
+
+Método multiplica
+
+Multiplica o racional atual com o racional passado como argumento e retorna um novo racional com o resultado.
+
+Por exemplo, para a operação 1/2×3/5:
+
+Racional a = new Racional(1, 2);
+Racional b = new Racional(3, 5);
+Racional c = a.multiplica(b);
+
+System.out.printf("%s * %s = %s\n", a.converteParaString(), b.converteParaString(), c.converteParaString());
+
+1/2 * 3/5 = 3/10
+
+Método divide
+
+Divide o racional atual pelo racional passado como argumento e retorna um novo racional com o resultado.
+
+Por exemplo, para a operação 1/2÷3/5, fazemos:
+
+Racional a = new Racional(1, 2);
+Racional b = new Racional(3, 5);
+Racional c = a.divide(b);
+
+System.out.printf("(%s) / (%s) = %s\n", a.converteParaString(), b.converteParaString(), c.converteParaString());
+
+(1/2) / (3/5) = 5/6
+
+Método igual
+
+Verifica se o racional atual é igual ao racional passado como argumento. Retorna true se forem iguais e false caso contrário.
+
+Racional a = new Racional(1, 2);
+Racional b = new Racional(1, 2);
+Racional c = new Racional(1, 3);
+
+boolean d = a.igual(b);
+boolean e = a.igual(c);
+
+System.out.printf("%s igual %s: %s\n", a.converteParaString(), b.converteParaString(), d);
+System.out.printf("%s igual %s: %s\n", a.converteParaString(), c.converteParaString(), e);
+
+1/2 igual 1/2: true
+1/2 igual 1/3: false
+
+Observações:
+
+Caso necessário, implemente métodos auxiliares para calcular o máximo divisor comum (mdc1) e o mínimo múltiplo comum (mmc2).
+
+Dois números racionais são considerados iguais se suas formas simplificadas são idênticas. Por exemplo, 12/36 e 1/3 são iguais, pois 12/36 pode ser simplificado para 1/3. Portanto, é essencial que os números sejam simplificados durante a comparação no método iguais.
