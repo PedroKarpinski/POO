@@ -1,4 +1,4 @@
-package Semana04.Datas;
+package Datas;
 
 public class Data {
     final int[] MESES_31DIAS = {1, 3, 5, 7, 8, 10, 12};

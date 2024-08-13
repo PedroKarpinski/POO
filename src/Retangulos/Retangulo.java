@@ -1,4 +1,4 @@
-package Semana04.Retangulos;
+package Retangulos;
 
 public class Retangulo {
     double centroX;

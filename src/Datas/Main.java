@@ -1,4 +1,4 @@
-package Semana04.Datas;
+package Datas;
 
 public class Main {
     public static void main(String[] args) {

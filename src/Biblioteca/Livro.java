@@ -1,17 +1,15 @@
-package Semana04.Biblioteca;
+package Biblioteca;
 
-public class Livro {
+class Livro {
     String titulo;
     String autor;
     int anoPublicacao;
-    String isbn;
     boolean emprestado;
 
-    Livro(String titulo, String autor, int anoPublicacao, String isbn) {
+    Livro (String titulo, String autor, int anoPublicacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
-        this.isbn = isbn;
         this.emprestado = false;
     }
 
@@ -23,7 +21,7 @@ public class Livro {
         this.emprestado = false;
     }
 
-    boolean emprestado() {
+    boolean isEmprestado() {
         return this.emprestado;
     }
 }

@@ -1,4 +1,4 @@
-package Semana04.Biblioteca;
+package Biblioteca;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ public class Biblioteca {
         ArrayList<Livro> emprestados = new ArrayList<>();
 
         for (Livro livro : acervo) {
-            if (livro.emprestado()) {
+            if (livro.isEmprestado()) {
                 emprestados.add(livro);
             }
         }
@@ -25,7 +25,7 @@ public class Biblioteca {
         ArrayList<Livro> disponiveis = new ArrayList<>();
 
         for (Livro livro : acervo) {
-            if (!livro.emprestado()) {
+            if (!livro.isEmprestado()) {
                 disponiveis.add(livro);
             }
         }

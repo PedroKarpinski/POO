@@ -1,4 +1,4 @@
-package Semana04.Retangulos;
+package Retangulos;
 
 public class Main {
     public static void main(String[] args) {

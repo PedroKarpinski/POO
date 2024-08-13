@@ -1,14 +1,14 @@
-package Semana04.Biblioteca;
+package Biblioteca;
 
 public class App {
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
 
-        Livro livro1 = new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1954, "123");
-        Livro livro2 = new Livro("Dom Quixote", "Miguel de Cervantes", 1605, "456");
-        Livro livro3 = new Livro("Guerra e Paz", "Lev Tolstói", 1860, "325");
-        Livro livro4 = new Livro("O Hobbit", "J. R. R. Tolkien", 1937, "173");
-        Livro livro5 = new Livro("100 anos de solidão", "Gabriel Garcia Marques", 1967, "961");
+        Livro livro1 = new Livro("O Senhor dos Anéis", "J. R. R. Tolkien", 1954);
+        Livro livro2 = new Livro("Dom Quixote", "Miguel de Cervantes", 1605);
+        Livro livro3 = new Livro("Guerra e Paz", "Lev Tolstói", 1860);
+        Livro livro4 = new Livro("O Hobbit", "J. R. R. Tolkien", 1937);
+        Livro livro5 = new Livro("100 anos de solidão", "Gabriel Garcia Marques", 1967);
 
         biblioteca.adicionaLivro(livro1);
         biblioteca.adicionaLivro(livro2);
