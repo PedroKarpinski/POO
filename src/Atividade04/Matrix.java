@@ -7,9 +7,7 @@ public class Matrix {
         this.cells = new double[cells.length][cells[0].length];
 
         for (int i = 0; i < cells.length; i++) {
-            for (int j = 0; j < cells[0].length; j++) {
-                this.cells[i][j] = cells[i][j];
-            }
+            System.arraycopy(cells[i], 0, this.cells[i], 0, cells[0].length);
         }
     }
     
@@ -29,9 +27,7 @@ public class Matrix {
         double c[][] = new double[this.cells.length][this.cells[0].length];
 
         for (int i = 0; i < this.cells.length; i++) {
-            for (int j = 0; j < this.cells[0].length; j++) {
-                c[i][j] = this.cells[i][j];
-            }
+            System.arraycopy(this.cells[i], 0, c[i], 0, this.cells[0].length);
         }
 
         return c;
