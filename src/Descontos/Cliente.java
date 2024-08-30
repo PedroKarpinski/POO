@@ -1,8 +1,8 @@
 package Descontos;
 
 public class Cliente {
-    private String nome;
-    private String email;
+    private final String nome;
+    private final String email;
     private boolean fidelidade;
 
     public Cliente(String nome, String email) {
